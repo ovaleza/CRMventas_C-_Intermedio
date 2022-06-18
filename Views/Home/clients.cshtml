@@ -1,0 +1,1076 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="au theme template">
+    <meta name="author" content="Hau Nguyen">
+    <meta name="keywords" content="au theme template">
+
+    <!-- Title Page-->
+    <title>Clientes</title>
+
+    <!-- Fontfaces CSS-->
+    <link href="../../css/font-face.css" rel="stylesheet" media="all">
+    <link href="../../vendor/font-awesome-5/css/fontawesome-all.min.css" rel="stylesheet" media="all">
+    <link href="../../vendor/font-awesome-4.7/css/font-awesome.min.css" rel="stylesheet" media="all">
+    <link href="../../vendor/mdi-font/css/material-design-iconic-font.min.css" rel="stylesheet" media="all">
+
+    <!-- Bootstrap CSS-->
+    <link href="../../vendor/bootstrap-4.1/bootstrap.min.css" rel="stylesheet" media="all">
+
+    <!-- Vendor CSS-->
+    <link href="../../vendor/animsition/animsition.min.css" rel="stylesheet" media="all">
+    <link href="../../vendor/bootstrap-progressbar/bootstrap-progressbar-3.3.4.min.css" rel="stylesheet" media="all">
+    <link href="../../vendor/wow/animate.css" rel="stylesheet" media="all">
+    <link href="../../vendor/css-hamburgers/hamburgers.min.css" rel="stylesheet" media="all">
+    <link href="../../vendor/slick/slick.css" rel="stylesheet" media="all">
+    <link href="../../vendor/select2/select2.min.css" rel="stylesheet" media="all">
+    <link href="../../vendor/perfect-scrollbar/perfect-scrollbar.css" rel="stylesheet" media="all">
+
+    <!-- Main CSS-->
+    <link href="../../css/theme.css" rel="stylesheet" media="all">
+
+</head>
+
+<body class="animsition">
+            <!-- MAIN CONTENT-->
+            <div class="main-content">
+                <div class="section__content section__content--p30">
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <!-- DATA TABLE-->
+                                <div class="table-responsive m-b-40">
+<!--                                    <table class="table table-borderless table-data3">-->
+                                        <table class="table table-responsive table-data3">
+                                        <thead>
+                                            <tr> 
+                                                <th><strong class="process">CLIENTES</strong></th>
+                                                <th colspan="5" align="right">
+
+                                                    <button class="btn btn-info btn-sm" id="agregar" name="agregar" onclick="agregar()">
+                                                        <i class="zmdi zmdi-plus"></i> <i>Agregar</i>
+                                                    </button>
+                                                    <button class="btn btn-info btn-sm">
+                                                        <i class="fa fa-print"></i> Listar
+                                                    </button>
+
+                                                    <button class="btn btn-info btn-sm">
+                                                        <i class="fa fa-download"></i> Exportar
+                                                    </button>
+                                                </th>
+                                            </tr>
+
+                                            <tr>
+                                                <th>Id</th>
+                                                <th>Nombre</th>
+                                                <th>Telefono</th>
+                                                <th>Estatus</th>
+                                                <th>..</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>1</td>
+                                                <td>Carlos Jimenez</td>
+                                                <td>809-222-2222</td>
+                                                <td class="process">Activo</td>
+                                                <td>
+                                                    <div class="table-data-feature">
+                                                        <button class="item" data-toggle="tooltip" data-placement="top" title="Editar" onclick="editar()">
+                                                            <i class="zmdi zmdi-edit"></i>
+                                                        </button>
+                                                        <button class="item" data-toggle="tooltip" data-placement="top" title="Borrar" onclick="borrar()">
+                                                            <i class="zmdi zmdi-delete"></i>
+                                                        </button>
+                                                    </div>
+                                                </td>
+
+                                            </tr>
+                                            <tr>
+                                                <td>2</td>
+                                                <td>Juan de los Palotes</td>
+                                                <td>809-221-2222</td>
+                                                <td class="process">Activo</td>
+                                                <td>
+                                                    <div class="table-data-feature">
+                                                        <button class="item" data-toggle="tooltip" data-placement="top" title="Editar" onclick="editar()">
+                                                            <i class="zmdi zmdi-edit"></i>
+                                                        </button>
+                                                        <button class="item" data-toggle="tooltip" data-placement="top" title="Borrar" onclick="borrar()">
+                                                            <i class="zmdi zmdi-delete"></i>
+                                                        </button>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>3</td>
+                                                <td>Cliente #3</td>
+                                                <td>809-333-2222</td>
+                                                <td class="status--process">InActivo</td>
+                                                <td>
+                                                    <div class="table-data-feature">
+                                                        <button class="item" data-toggle="tooltip" data-placement="top" title="Editar" onclick="editar()">
+                                                            <i class="zmdi zmdi-edit"></i>
+                                                        </button>
+                                                        <button class="item" data-toggle="tooltip" data-placement="top" title="Borrar" onclick="borrar()">
+                                                            <i class="zmdi zmdi-delete"></i>
+                                                        </button>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>4</td>
+                                                <td>Carlos Jimenez</td>
+                                                <td>809-222-2222</td>
+                                                <td class="process">Activo</td>
+                                                <td>
+                                                    <div class="table-data-feature">
+                                                        <button class="item" data-toggle="tooltip" data-placement="top" title="Editar" onclick="editar()">
+                                                            <i class="zmdi zmdi-edit"></i>
+                                                        </button>
+                                                        <button class="item" data-toggle="tooltip" data-placement="top" title="Borrar" onclick="borrar()">
+                                                            <i class="zmdi zmdi-delete"></i>
+                                                        </button>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>5</td>
+                                                <td>Juan de los Palotes</td>
+                                                <td>809-221-2222</td>
+                                                <td class="process">Activo</td>
+                                                <td>
+                                                    <div class="table-data-feature">
+                                                        <button class="item" data-toggle="tooltip" data-placement="top" title="Editar" onclick="editar()">
+                                                            <i class="zmdi zmdi-edit"></i>
+                                                        </button>
+                                                        <button class="item" data-toggle="tooltip" data-placement="top" title="Borrar" onclick="borrar()">
+                                                            <i class="zmdi zmdi-delete"></i>
+                                                        </button>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>6</td>
+                                                <td>Cliente #3</td>
+                                                <td>809-333-2222</td>
+                                                <td class="status--process">InActivo</td>
+                                                <td>
+                                                    <div class="table-data-feature">
+                                                        <button class="item" data-toggle="tooltip" data-placement="top" title="Editar" onclick="editar()">
+                                                            <i class="zmdi zmdi-edit"></i>
+                                                        </button>
+                                                        <button class="item" data-toggle="tooltip" data-placement="top" title="Borrar" onclick="borrar()">
+                                                            <i class="zmdi zmdi-delete"></i>
+                                                        </button>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>7</td>
+                                                <td>Carlos Jimenez</td>
+                                                <td>809-222-2222</td>
+                                                <td class="process">Activo</td>
+                                                <td>
+                                                    <div class="table-data-feature">
+                                                        <button class="item" data-toggle="tooltip" data-placement="top" title="Editar" onclick="editar()">
+                                                            <i class="zmdi zmdi-edit"></i>
+                                                        </button>
+                                                        <button class="item" data-toggle="tooltip" data-placement="top" title="Borrar" onclick="borrar()">
+                                                            <i class="zmdi zmdi-delete"></i>
+                                                        </button>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>8</td>
+                                                <td>Juan de los Palotes</td>
+                                                <td>809-221-2222</td>
+                                                <td class="process">Activo</td>
+                                                <td>
+                                                    <div class="table-data-feature">
+                                                        <button class="item" data-toggle="tooltip" data-placement="top" title="Editar" onclick="editar()">
+                                                            <i class="zmdi zmdi-edit"></i>
+                                                        </button>
+                                                        <button class="item" data-toggle="tooltip" data-placement="top" title="Borrar" onclick="borrar()">
+                                                            <i class="zmdi zmdi-delete"></i>
+                                                        </button>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>9</td>
+                                                <td>Cliente #3</td>
+                                                <td>809-333-2222</td>
+                                                <td class="status--process">InActivo</td>
+                                                <td>
+                                                    <div class="table-data-feature">
+                                                        <button class="item" data-toggle="tooltip" data-placement="top" title="Editar" onclick="editar()">
+                                                            <i class="zmdi zmdi-edit"></i>
+                                                        </button>
+                                                        <button class="item" data-toggle="tooltip" data-placement="top" title="Borrar" onclick="borrar()">
+                                                            <i class="zmdi zmdi-delete"></i>
+                                                        </button>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>7</td>
+                                                <td>Carlos Jimenez</td>
+                                                <td>809-222-2222</td>
+                                                <td class="process">Activo</td>
+                                                <td>
+                                                    <div class="table-data-feature">
+                                                        <button class="item" data-toggle="tooltip" data-placement="top" title="Editar" onclick="editar()">
+                                                            <i class="zmdi zmdi-edit"></i>
+                                                        </button>
+                                                        <button class="item" data-toggle="tooltip" data-placement="top" title="Borrar" onclick="borrar()">
+                                                            <i class="zmdi zmdi-delete"></i>
+                                                        </button>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>8</td>
+                                                <td>Juan de los Palotes</td>
+                                                <td>809-221-2222</td>
+                                                <td class="process">Activo</td>
+                                                <td>
+                                                    <div class="table-data-feature">
+                                                        <button class="item" data-toggle="tooltip" data-placement="top" title="Editar" onclick="editar()">
+                                                            <i class="zmdi zmdi-edit"></i>
+                                                        </button>
+                                                        <button class="item" data-toggle="tooltip" data-placement="top" title="Borrar" onclick="borrar()">
+                                                            <i class="zmdi zmdi-delete"></i>
+                                                        </button>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>9</td>
+                                                <td>Cliente #3</td>
+                                                <td>809-333-2222</td>
+                                                <td class="status--process">InActivo</td>
+                                                <td>
+                                                    <div class="table-data-feature">
+                                                        <button class="item" data-toggle="tooltip" data-placement="top" title="Editar" onclick="editar()">
+                                                            <i class="zmdi zmdi-edit"></i>
+                                                        </button>
+                                                        <button class="item" data-toggle="tooltip" data-placement="top" title="Borrar" onclick="borrar()">
+                                                            <i class="zmdi zmdi-delete"></i>
+                                                        </button>
+                                                    </div>
+                                                </td>
+                                            </tr>
+
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <!-- END DATA TABLE-->
+                            </div>
+
+                            <div class="col-lg-6" id="formulario" name="formulario" style="display:none">
+                                <div class="card">
+                                    <div class="card-header">
+                                        <h4>Ficha de Cliente</h4>
+                                    </div>
+                                    <div class="card-body">
+                                        <div class="default-tab">
+                                            <nav>
+                                                <div class="nav nav-tabs" id="nav-tab" role="tablist">
+                                                    <a class="nav-item nav-link active" id="nav-home-tab" data-toggle="tab" href="#nav-home" role="tab" aria-controls="nav-home"
+                                                       aria-selected="true">Datos Generales</a>
+                                                    <a class="nav-item nav-link" id="nav-profile-tab" data-toggle="tab" href="#nav-profile" role="tab" aria-controls="nav-profile"
+                                                       aria-selected="false">Transacciones</a>
+                                                    <a class="nav-item nav-link" id="nav-contact-tab" data-toggle="tab" href="#nav-contact" role="tab" aria-controls="nav-contact"
+                                                       aria-selected="false">Iteracciones</a>
+                                                </div>
+                                            </nav>
+                                            <div class="tab-content pl-3 pt-2" id="nav-tabContent">
+                                                <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
+                                                    <div class="col-lg-16">
+                                                      <div class="card-body card-block card-right">
+                                                            @model Client
+                                                            <form method="post" enctype="multipart/form-data" class="form-horizontal" asp-controller="Home" asp-action="clients">
+                                                                <div class="table-data__tool">
+                                                                    <div class="table-data__tool-right" align="right">
+                                                                      <button type="submit" class="btn btn-primary btn-sm">
+                                                                            <i class="fa fa-dot-circle-o"></i> Grabar
+                                                                        </button>
+                                                                        <button type="reset" class="btn btn-danger btn-sm" id="cancelar" name="cancelar">
+                                                                            <i class="fa fa-ban"></i> Cancelar
+                                                                        </button>
+                                                                    </div>
+                                                                    <div asp-validation-summary="All" id="alert" name="alert" class="form-control-label text-danger"> </div>                                                                    
+                                                                </div>
+                                                                <div class="row form-group">
+                                                                    <div class="col col-md-3">
+                                                                        <label class=" form-control-label">ID</label>
+                                                                    </div>
+                                                                    <div class="col-12 col-md-9">
+                                                                        <input type="text" id="id" name="id" class="form-control-static" disabled asp-for="Id" asp-for="Id">
+                                                                    </div>
+                                                                </div>
+                                                                <div class="row form-group">
+                                                                    <div class="col col-md-3">
+                                                                        <label for="name" class=" form-control-label">Nombre</label>
+                                                                    </div>
+                                                                    <div class="col-12 col-md-9">
+                                                                        <input type="text" id="name" name="name" placeholder="Colocar nombre completo [Requerido]" class="form-control" asp-for="Name">
+                                                                    </div>
+                                                                </div>
+                                                                <div class="row form-group">
+                                                                    <div class="col col-md-3">
+                                                                        <label for="address" class=" form-control-label">Direccion</label>
+                                                                    </div>
+                                                                    <div class="col-12 col-md-9">
+                                                                        <input type="text" id="address" name="address" placeholder="Colocar Direccion completa" class="form-control" asp-for="Address">
+                                                                    </div>
+                                                                </div>
+                                                                <div class="row form-group">
+                                                                    <div class="col col-md-3">
+                                                                        <label for="phone" class=" form-control-label">Telefono</label>
+                                                                    </div>
+                                                                    <div class="col-12 col-md-9">
+                                                                        <input type="text" id="phone" name="phone" placeholder="999-999-9999 (Valido 10-15 digitos)" class="form-control" asp-for="Phone">
+                                                                    </div>
+                                                                </div>
+
+                                                                <div class="row form-group">
+                                                                    <div class="col col-md-3">
+                                                                        <label for="email" class=" form-control-label">Email</label>
+                                                                    </div>
+                                                                    <div class="col-12 col-md-9">
+                                                                        <input type="email" id="email" name="email" placeholder="email@com" class="form-control" asp-for="Email">
+                                                                    </div>
+                                                                </div>
+                                                                <div class="row form-group">
+                                                                    <div class="col col-md-3">
+                                                                        <label for="type" class=" form-control-label">Tipo Cliente</label>
+                                                                    </div>
+                                                                    <div class="col-12 col-md-9">
+                                                                        <select name="type" id="type" class="form-control" asp-for="Type">>
+                                                                            <option value="0">Escoja tipo Cliente</option>
+                                                                            <option value="1">Empresarial</option>
+                                                                            <option value="2">Gubernamental</option>
+                                                                            <option value="3">Personal</option>
+                                                                        </select>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="row form-group">
+                                                                    <div class="col col-md-3">
+                                                                        <label class="form-control-label">Estatus del Cliente</label>
+                                                                    </div>
+                                                                    <div class="col col-md-9">
+                                                                        <div class="form-check">
+                                                                            <div class="checkbox">
+                                                                                <label for="checkbox1" class="form-check-label ">
+                                                                                    <input type="checkbox" id="active" name="active" value="True" class="form-check-input" asp-for="Active">Activo
+                                                                                </label>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="row form-group">
+                                                                    <div class="col col-md-3">
+                                                                        <label for="file" class=" form-control-label">Cargar documentos</label>
+                                                                    </div>
+                                                                    <div class="col-12 col-md-9">
+                                                                        <input type="file" id="file" name="file" multiple="" class="form-control-file" asp-for="File">
+                                                                    </div>
+                                                                </div>
+                                                            </form>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
+                                                    <div class="col-lg-16">
+                                                        <!-- DATA TABLE -->
+                                                        <!--<h3 class="title-5 m-b-35">data table</h3>-->
+                                                        <div class="table-data__tool">
+                                                            <div class="table-data__tool-left">
+                                                                <div class="rs-select2--light rs-select2--md">
+                                                                    <select class="js-select2" name="property">
+                                                                        <option selected="selected">Todas</option>
+                                                                        <option value="V">Ventas</option>
+                                                                        <option value="Q">Quejas</option>
+                                                                    </select>
+                                                                    <div class="dropDownSelect2"></div>
+                                                                </div>
+                                                                <div class="rs-select2--light rs-select2--sm">
+                                                                    <select class="js-select2" name="time">
+                                                                        <option selected="selected">Hoy</option>
+                                                                        <option value="">3 Days</option>
+                                                                        <option value="">1 Week</option>
+                                                                    </select>
+                                                                    <div class="dropDownSelect2"></div>
+                                                                </div>
+                                                                <button class="au-btn-filter">
+                                                                    <i class="zmdi zmdi-filter-list"></i>filters
+                                                                </button>
+                                                            </div>
+                                                            <div class="table-data__tool-right">
+                                                                <button class="au-btn au-btn-icon au-btn--green au-btn--small">
+                                                                    <i class="zmdi zmdi-plus"></i>Agregar
+                                                                </button>
+                                                                <div class="rs-select2--dark rs-select2--sm rs-select2--dark2">
+                                                                    <select class="js-select2" name="type">
+                                                                        <option selected="selected">Exportar</option>
+                                                                        <option value="">PDF</option>
+                                                                        <option value="">Excel</option>
+                                                                    </select>
+                                                                    <div class="dropDownSelect2"></div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="table-responsive table-responsive-data2">
+                                                            <table class="table table-responsive table-data1">
+                                                                <thead>
+                                                                    <tr>
+                                                                        <th>Id</th>
+                                                                        <th>Fecha</th>
+                                                                        <th>Tipo</th>
+                                                                        <th>Nota</th>
+                                                                        <th>Monto</th>
+                                                                        <th></th>
+                                                                    </tr>
+                                                                </thead>
+                                                                <tbody>
+                                                                    <tr>
+                                                                        <td>12</td>
+                                                                        <td>15-05-2017</td>
+                                                                        <td>FC</td>
+                                                                        <td>
+                                                                            <div class="table-data__info">
+                                                                                <h6>Factura</h6>
+                                                                                <span>
+                                                                                    <a>Servicio de mensajeria</a>
+                                                                                </span>
+                                                                            </div>
+                                                                        </td>
+                                                                        <td>$1,200.00</td>
+                                                                        <td>
+                                                                            <div class="table-data-feature">
+                                                                                <button class="item" data-toggle="tooltip" data-placement="top" title="Enviar">
+                                                                                    <i class="zmdi zmdi-mail-send"></i>
+                                                                                </button>
+                                                                                <button class="item" data-toggle="tooltip" data-placement="top" title="Editar">
+                                                                                    <i class="zmdi zmdi-edit"></i>
+                                                                                </button>
+                                                                                <button class="item" data-toggle="tooltip" data-placement="top" title="Borrar">
+                                                                                    <i class="zmdi zmdi-delete"></i>
+                                                                                </button>
+                                                                                <button class="item" data-toggle="tooltip" data-placement="top" title="Mas">
+                                                                                    <i class="zmdi zmdi-more"></i>
+                                                                                </button>
+                                                                            </div>
+                                                                        </td>
+
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td>13</td>
+                                                                        <td>15-05-2017</td>
+                                                                        <td>RC</td>
+                                                                        <td>
+                                                                            <div class="table-data__info">
+                                                                                <h6>Recibo</h6>
+                                                                                <span>
+                                                                                    <a>Pago en Efectivo</a>
+                                                                                </span>
+                                                                            </div>
+                                                                        </td>
+                                                                        <td>$1,200.00</td>
+                                                                        <td>
+                                                                            <div class="table-data-feature">
+                                                                                <button class="item" data-toggle="tooltip" data-placement="top" title="Enviar">
+                                                                                    <i class="zmdi zmdi-mail-send"></i>
+                                                                                </button>
+                                                                                <button class="item" data-toggle="tooltip" data-placement="top" title="Editar">
+                                                                                    <i class="zmdi zmdi-edit"></i>
+                                                                                </button>
+                                                                                <button class="item" data-toggle="tooltip" data-placement="top" title="Borrar">
+                                                                                    <i class="zmdi zmdi-delete"></i>
+                                                                                </button>
+                                                                                <button class="item" data-toggle="tooltip" data-placement="top" title="Mas">
+                                                                                    <i class="zmdi zmdi-more"></i>
+                                                                                </button>
+                                                                            </div>
+                                                                        </td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td>14</td>
+                                                                        <td>15-05-2017</td>
+                                                                        <td>FC</td>
+                                                                        <td>
+                                                                            <div class="table-data__info">
+                                                                                <h6>Factura</h6>
+                                                                                <span>
+                                                                                    <a>3 Galones de aceite</a>
+                                                                                </span>
+                                                                            </div>
+                                                                        </td>
+                                                                        <td>$21,200.00</td>
+                                                                        <td>
+                                                                            <div class="table-data-feature">
+                                                                                <button class="item" data-toggle="tooltip" data-placement="top" title="Enviar">
+                                                                                    <i class="zmdi zmdi-mail-send"></i>
+                                                                                </button>
+                                                                                <button class="item" data-toggle="tooltip" data-placement="top" title="Editar">
+                                                                                    <i class="zmdi zmdi-edit"></i>
+                                                                                </button>
+                                                                                <button class="item" data-toggle="tooltip" data-placement="top" title="Borrar">
+                                                                                    <i class="zmdi zmdi-delete"></i>
+                                                                                </button>
+                                                                                <button class="item" data-toggle="tooltip" data-placement="top" title="Mas">
+                                                                                    <i class="zmdi zmdi-more"></i>
+                                                                                </button>
+                                                                            </div>
+                                                                        </td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td>15</td>
+                                                                        <td>15-05-2017</td>
+                                                                        <td>RC</td>
+                                                                        <td>
+                                                                            <div class="table-data__info">
+                                                                                <h6>Recibo</h6>
+                                                                                <span>
+                                                                                    <a>Cheque #12, Banco Popular</a>
+                                                                                </span>
+                                                                            </div>
+                                                                        </td>
+                                                                        <td>$20,200.00</td>
+                                                                        <td>
+                                                                            <div class="table-data-feature">
+                                                                                <button class="item" data-toggle="tooltip" data-placement="top" title="Enviar">
+                                                                                    <i class="zmdi zmdi-mail-send"></i>
+                                                                                </button>
+                                                                                <button class="item" data-toggle="tooltip" data-placement="top" title="Editar">
+                                                                                    <i class="zmdi zmdi-edit"></i>
+                                                                                </button>
+                                                                                <button class="item" data-toggle="tooltip" data-placement="top" title="Borrar">
+                                                                                    <i class="zmdi zmdi-delete"></i>
+                                                                                </button>
+                                                                                <button class="item" data-toggle="tooltip" data-placement="top" title="Mas">
+                                                                                    <i class="zmdi zmdi-more"></i>
+                                                                                </button>
+                                                                            </div>
+                                                                        </td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td>12</td>
+                                                                        <td>15-05-2017</td>
+                                                                        <td>NC</td>
+                                                                        <td>
+                                                                            <div class="table-data__info">
+                                                                                <h6>Descuento</h6>
+                                                                                <span>
+                                                                                    <a>Descuento por Pronto Pago</a>
+                                                                                </span>
+                                                                            </div>
+                                                                        </td>
+                                                                        <td>$1,000.00</td>
+                                                                        <td>
+                                                                            <div class="table-data-feature">
+                                                                                <button class="item" data-toggle="tooltip" data-placement="top" title="Enviar">
+                                                                                    <i class="zmdi zmdi-mail-send"></i>
+                                                                                </button>
+                                                                                <button class="item" data-toggle="tooltip" data-placement="top" title="Editar">
+                                                                                    <i class="zmdi zmdi-edit"></i>
+                                                                                </button>
+                                                                                <button class="item" data-toggle="tooltip" data-placement="top" title="Borrar">
+                                                                                    <i class="zmdi zmdi-delete"></i>
+                                                                                </button>
+                                                                                <button class="item" data-toggle="tooltip" data-placement="top" title="Mas">
+                                                                                    <i class="zmdi zmdi-more"></i>
+                                                                                </button>
+                                                                            </div>
+                                                                        </td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td>12</td>
+                                                                        <td>15-05-2017</td>
+                                                                        <td>FC</td>
+                                                                        <td>
+                                                                            <div class="table-data__info">
+                                                                                <h6>Factura</h6>
+                                                                                <span>
+                                                                                    <a>Servicio de mensajeria</a>
+                                                                                </span>
+                                                                            </div>
+                                                                        </td>
+                                                                        <td>$1,200.00</td>
+                                                                        <td>
+                                                                            <div class="table-data-feature">
+                                                                                <button class="item" data-toggle="tooltip" data-placement="top" title="Enviar">
+                                                                                    <i class="zmdi zmdi-mail-send"></i>
+                                                                                </button>
+                                                                                <button class="item" data-toggle="tooltip" data-placement="top" title="Editar">
+                                                                                    <i class="zmdi zmdi-edit"></i>
+                                                                                </button>
+                                                                                <button class="item" data-toggle="tooltip" data-placement="top" title="Borrar">
+                                                                                    <i class="zmdi zmdi-delete"></i>
+                                                                                </button>
+                                                                                <button class="item" data-toggle="tooltip" data-placement="top" title="Mas">
+                                                                                    <i class="zmdi zmdi-more"></i>
+                                                                                </button>
+                                                                            </div>
+                                                                        </td>
+
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td>13</td>
+                                                                        <td>15-05-2017</td>
+                                                                        <td>RC</td>
+                                                                        <td>
+                                                                            <div class="table-data__info">
+                                                                                <h6>Recibo</h6>
+                                                                                <span>
+                                                                                    <a>Pago en Efectivo</a>
+                                                                                </span>
+                                                                            </div>
+                                                                        </td>
+                                                                        <td>$1,200.00</td>
+                                                                        <td>
+                                                                            <div class="table-data-feature">
+                                                                                <button class="item" data-toggle="tooltip" data-placement="top" title="Enviar">
+                                                                                    <i class="zmdi zmdi-mail-send"></i>
+                                                                                </button>
+                                                                                <button class="item" data-toggle="tooltip" data-placement="top" title="Editar">
+                                                                                    <i class="zmdi zmdi-edit"></i>
+                                                                                </button>
+                                                                                <button class="item" data-toggle="tooltip" data-placement="top" title="Borrar">
+                                                                                    <i class="zmdi zmdi-delete"></i>
+                                                                                </button>
+                                                                                <button class="item" data-toggle="tooltip" data-placement="top" title="Mas">
+                                                                                    <i class="zmdi zmdi-more"></i>
+                                                                                </button>
+                                                                            </div>
+                                                                        </td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td>14</td>
+                                                                        <td>15-05-2017</td>
+                                                                        <td>FC</td>
+                                                                        <td>
+                                                                            <div class="table-data__info">
+                                                                                <h6>Factura</h6>
+                                                                                <span>
+                                                                                    <a>3 Galones de aceite</a>
+                                                                                </span>
+                                                                            </div>
+                                                                        </td>
+                                                                        <td>$21,200.00</td>
+                                                                        <td>
+                                                                            <div class="table-data-feature">
+                                                                                <button class="item" data-toggle="tooltip" data-placement="top" title="Enviar">
+                                                                                    <i class="zmdi zmdi-mail-send"></i>
+                                                                                </button>
+                                                                                <button class="item" data-toggle="tooltip" data-placement="top" title="Editar">
+                                                                                    <i class="zmdi zmdi-edit"></i>
+                                                                                </button>
+                                                                                <button class="item" data-toggle="tooltip" data-placement="top" title="Borrar">
+                                                                                    <i class="zmdi zmdi-delete"></i>
+                                                                                </button>
+                                                                                <button class="item" data-toggle="tooltip" data-placement="top" title="Mas">
+                                                                                    <i class="zmdi zmdi-more"></i>
+                                                                                </button>
+                                                                            </div>
+                                                                        </td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td>15</td>
+                                                                        <td>15-05-2017</td>
+                                                                        <td>RC</td>
+                                                                        <td>
+                                                                            <div class="table-data__info">
+                                                                                <h6>Recibo</h6>
+                                                                                <span>
+                                                                                    <a>Cheque #12, Banco Popular</a>
+                                                                                </span>
+                                                                            </div>
+                                                                        </td>
+                                                                        <td>$20,200.00</td>
+                                                                        <td>
+                                                                            <div class="table-data-feature">
+                                                                                <button class="item" data-toggle="tooltip" data-placement="top" title="Enviar">
+                                                                                    <i class="zmdi zmdi-mail-send"></i>
+                                                                                </button>
+                                                                                <button class="item" data-toggle="tooltip" data-placement="top" title="Editar">
+                                                                                    <i class="zmdi zmdi-edit"></i>
+                                                                                </button>
+                                                                                <button class="item" data-toggle="tooltip" data-placement="top" title="Borrar">
+                                                                                    <i class="zmdi zmdi-delete"></i>
+                                                                                </button>
+                                                                                <button class="item" data-toggle="tooltip" data-placement="top" title="Mas">
+                                                                                    <i class="zmdi zmdi-more"></i>
+                                                                                </button>
+                                                                            </div>
+                                                                        </td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td>12</td>
+                                                                        <td>15-05-2017</td>
+                                                                        <td>NC</td>
+                                                                        <td>
+                                                                            <div class="table-data__info">
+                                                                                <h6>Descuento</h6>
+                                                                                <span>
+                                                                                    <a>Descuento por Pronto Pago</a>
+                                                                                </span>
+                                                                            </div>
+                                                                        </td>
+                                                                        <td>$1,000.00</td>
+                                                                        <td>
+                                                                            <div class="table-data-feature">
+                                                                                <button class="item" data-toggle="tooltip" data-placement="top" title="Enviar">
+                                                                                    <i class="zmdi zmdi-mail-send"></i>
+                                                                                </button>
+                                                                                <button class="item" data-toggle="tooltip" data-placement="top" title="Editar">
+                                                                                    <i class="zmdi zmdi-edit"></i>
+                                                                                </button>
+                                                                                <button class="item" data-toggle="tooltip" data-placement="top" title="Borrar">
+                                                                                    <i class="zmdi zmdi-delete"></i>
+                                                                                </button>
+                                                                                <button class="item" data-toggle="tooltip" data-placement="top" title="Mas">
+                                                                                    <i class="zmdi zmdi-more"></i>
+                                                                                </button>
+                                                                            </div>
+                                                                        </td>
+                                                                    </tr>
+
+                                                                </tbody>
+                                                            </table>
+                                                        </div>
+                                                    </div>
+                                                    <!-- END USER DATA-->
+                                                </div>
+                                                <div class="tab-pane fade" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab">
+                                                    <div class="col-lg-16">
+                                                        <!-- DATA TABLE -->
+                                                        <!--<h3 class="title-5 m-b-35">data table</h3>-->
+                                                        <div class="table-data__tool">
+                                                            <div class="table-data__tool-left">
+                                                                <div class="rs-select2--light rs-select2--md">
+                                                                    <select class="js-select2" name="property">
+                                                                        <option selected="selected">Todas</option>
+                                                                        <option value="V">Ventas</option>
+                                                                        <option value="Q">Quejas</option>
+                                                                    </select>
+                                                                    <div class="dropDownSelect2"></div>
+                                                                </div>
+                                                                <div class="rs-select2--light rs-select2--sm">
+                                                                    <select class="js-select2" name="time">
+                                                                        <option selected="selected">Hoy</option>
+                                                                        <option value="">3 Days</option>
+                                                                        <option value="">1 Week</option>
+                                                                    </select>
+                                                                    <div class="dropDownSelect2"></div>
+                                                                </div>
+                                                                <button class="au-btn-filter">
+                                                                    <i class="zmdi zmdi-filter-list"></i>filters
+                                                                </button>
+                                                            </div>
+                                                            <div class="table-data__tool-right">
+                                                                <button class="au-btn au-btn-icon au-btn--green au-btn--small">
+                                                                    <i class="zmdi zmdi-plus"></i>Agregar
+                                                                </button>
+                                                                <div class="rs-select2--dark rs-select2--sm rs-select2--dark2">
+                                                                    <select class="js-select2" name="type">
+                                                                        <option selected="selected">Exportar</option>
+                                                                        <option value="">PDF</option>
+                                                                        <option value="">Excel</option>
+                                                                    </select>
+                                                                    <div class="dropDownSelect2"></div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="table-responsive table-responsive-data2">
+                                                            <table class="table table-responsive table-data1">
+                                                                <thead>
+                                                                    <tr>
+                                                                        <th>id</th>
+                                                                        <th>fecha</th>
+                                                                        <th>tipo</th>
+                                                                        <th>description</th>
+                                                                        <th>Estatus</th>
+                                                                        <th></th>
+                                                                    </tr>
+                                                                </thead>
+                                                                <tbody>
+                                                                    <tr class="tr-shadow">
+                                                                        <td>12</td>
+                                                                        <td>2018-09-27 02:12</td>
+                                                                        <td>Q</td>
+                                                                        <td>
+                                                                            <span class="block-email">Queja del cliente #1</span>
+                                                                        </td>
+                                                                        <td>
+                                                                            <span class="status--process">Procesado</span>
+                                                                        </td>
+                                                                        <td>
+                                                                            <div class="table-data-feature">
+                                                                                <button class="item" data-toggle="tooltip" data-placement="top" title="Enviar">
+                                                                                    <i class="zmdi zmdi-mail-send"></i>
+                                                                                </button>
+                                                                                <button class="item" data-toggle="tooltip" data-placement="top" title="Editar">
+                                                                                    <i class="zmdi zmdi-edit"></i>
+                                                                                </button>
+                                                                                <button class="item" data-toggle="tooltip" data-placement="top" title="Borrar">
+                                                                                    <i class="zmdi zmdi-delete"></i>
+                                                                                </button>
+                                                                                <button class="item" data-toggle="tooltip" data-placement="top" title="Mas">
+                                                                                    <i class="zmdi zmdi-more"></i>
+                                                                                </button>
+                                                                            </div>
+                                                                        </td>
+                                                                    </tr>
+                                                                    <tr class="spacer"></tr>
+                                                                    <tr class="tr-shadow">
+                                                                        <td>12</td>
+                                                                        <td>2018-09-27 02:12</td>
+                                                                        <td>Q</td>
+                                                                        <td>
+                                                                            <span class="block-email">Queja del cliente #1</span>
+                                                                        </td>
+                                                                        <td>
+                                                                            <span class="status--process">Procesado</span>
+                                                                        </td>
+                                                                        <td>
+                                                                            <div class="table-data-feature">
+                                                                                <button class="item" data-toggle="tooltip" data-placement="top" title="Enviar">
+                                                                                    <i class="zmdi zmdi-mail-send"></i>
+                                                                                </button>
+                                                                                <button class="item" data-toggle="tooltip" data-placement="top" title="Editar">
+                                                                                    <i class="zmdi zmdi-edit"></i>
+                                                                                </button>
+                                                                                <button class="item" data-toggle="tooltip" data-placement="top" title="Borrar">
+                                                                                    <i class="zmdi zmdi-delete"></i>
+                                                                                </button>
+                                                                                <button class="item" data-toggle="tooltip" data-placement="top" title="Mas">
+                                                                                    <i class="zmdi zmdi-more"></i>
+                                                                                </button>
+                                                                            </div>
+                                                                        </td>
+                                                                    </tr>
+                                                                    <tr class="spacer"></tr>
+                                                                    <tr class="tr-shadow">
+                                                                        <td>12</td>
+                                                                        <td>2018-09-27 02:12</td>
+                                                                        <td>Q</td>
+                                                                        <td>
+                                                                            <span class="block-email">Queja del cliente #1</span>
+                                                                        </td>
+                                                                        <td>
+                                                                            <span class="status--process">Procesado</span>
+                                                                        </td>
+                                                                        <td>
+                                                                            <div class="table-data-feature">
+                                                                                <button class="item" data-toggle="tooltip" data-placement="top" title="Enviar">
+                                                                                    <i class="zmdi zmdi-mail-send"></i>
+                                                                                </button>
+                                                                                <button class="item" data-toggle="tooltip" data-placement="top" title="Editar">
+                                                                                    <i class="zmdi zmdi-edit"></i>
+                                                                                </button>
+                                                                                <button class="item" data-toggle="tooltip" data-placement="top" title="Borrar">
+                                                                                    <i class="zmdi zmdi-delete"></i>
+                                                                                </button>
+                                                                                <button class="item" data-toggle="tooltip" data-placement="top" title="Mas">
+                                                                                    <i class="zmdi zmdi-more"></i>
+                                                                                </button>
+                                                                            </div>
+                                                                        </td>
+                                                                    </tr>
+                                                                    <tr class="spacer"></tr>
+
+                                                                    <tr class="tr-shadow">
+                                                                        <td>13</td>
+                                                                        <td>2018-09-28 02:12</td>
+                                                                        <td>Q</td>
+                                                                        <td>
+                                                                            <span class="block-email">Queja del cliente #2</span>
+                                                                        </td>
+                                                                        <td>
+                                                                            <span class="status--process">Procesado</span>
+                                                                        </td>
+                                                                        <td>
+                                                                            <div class="table-data-feature">
+                                                                                <button class="item" data-toggle="tooltip" data-placement="top" title="Send">
+                                                                                    <i class="zmdi zmdi-mail-send"></i>
+                                                                                </button>
+                                                                                <button class="item" data-toggle="tooltip" data-placement="top" title="Edit">
+                                                                                    <i class="zmdi zmdi-edit"></i>
+                                                                                </button>
+                                                                                <button class="item" data-toggle="tooltip" data-placement="top" title="Delete">
+                                                                                    <i class="zmdi zmdi-delete"></i>
+                                                                                </button>
+                                                                                <button class="item" data-toggle="tooltip" data-placement="top" title="More">
+                                                                                    <i class="zmdi zmdi-more"></i>
+                                                                                </button>
+                                                                            </div>
+                                                                        </td>
+                                                                    </tr>
+                                                                    <tr class="spacer"></tr>
+
+                                                                    <tr class="tr-shadow">
+                                                                        <td>13</td>
+                                                                        <td>2018-09-28 02:12</td>
+                                                                        <td>Q</td>
+                                                                        <td>
+                                                                            <span class="block-email">Queja del cliente #2</span>
+                                                                        </td>
+                                                                        <td>
+                                                                            <span class="status--process">Procesado</span>
+                                                                        </td>
+                                                                        <td>
+                                                                            <div class="table-data-feature">
+                                                                                <button class="item" data-toggle="tooltip" data-placement="top" title="Send">
+                                                                                    <i class="zmdi zmdi-mail-send"></i>
+                                                                                </button>
+                                                                                <button class="item" data-toggle="tooltip" data-placement="top" title="Edit">
+                                                                                    <i class="zmdi zmdi-edit"></i>
+                                                                                </button>
+                                                                                <button class="item" data-toggle="tooltip" data-placement="top" title="Delete">
+                                                                                    <i class="zmdi zmdi-delete"></i>
+                                                                                </button>
+                                                                                <button class="item" data-toggle="tooltip" data-placement="top" title="More">
+                                                                                    <i class="zmdi zmdi-more"></i>
+                                                                                </button>
+                                                                            </div>
+                                                                        </td>
+                                                                    </tr>
+                                                                    <tr class="spacer"></tr>
+
+                                                                    <tr class="tr-shadow">
+                                                                        <td>13</td>
+                                                                        <td>2018-09-28 02:12</td>
+                                                                        <td>Q</td>
+                                                                        <td>
+                                                                            <span class="block-email">Queja del cliente #2</span>
+                                                                        </td>
+                                                                        <td>
+                                                                            <span class="status--process">Procesado</span>
+                                                                        </td>
+                                                                        <td>
+                                                                            <div class="table-data-feature">
+                                                                                <button class="item" data-toggle="tooltip" data-placement="top" title="Send">
+                                                                                    <i class="zmdi zmdi-mail-send"></i>
+                                                                                </button>
+                                                                                <button class="item" data-toggle="tooltip" data-placement="top" title="Edit">
+                                                                                    <i class="zmdi zmdi-edit"></i>
+                                                                                </button>
+                                                                                <button class="item" data-toggle="tooltip" data-placement="top" title="Delete">
+                                                                                    <i class="zmdi zmdi-delete"></i>
+                                                                                </button>
+                                                                                <button class="item" data-toggle="tooltip" data-placement="top" title="More">
+                                                                                    <i class="zmdi zmdi-more"></i>
+                                                                                </button>
+                                                                            </div>
+                                                                        </td>
+                                                                    </tr>
+                                                                    <tr class="spacer"></tr>
+
+                                                                    <tr class="tr-shadow">
+                                                                        <td>13</td>
+                                                                        <td>2018-09-28 02:12</td>
+                                                                        <td>Q</td>
+                                                                        <td>
+                                                                            <span class="block-email">Queja del cliente #2</span>
+                                                                        </td>
+                                                                        <td>
+                                                                            <span class="status--process">Procesado</span>
+                                                                        </td>
+                                                                        <td>
+                                                                            <div class="table-data-feature">
+                                                                                <button class="item" data-toggle="tooltip" data-placement="top" title="Send">
+                                                                                    <i class="zmdi zmdi-mail-send"></i>
+                                                                                </button>
+                                                                                <button class="item" data-toggle="tooltip" data-placement="top" title="Edit">
+                                                                                    <i class="zmdi zmdi-edit"></i>
+                                                                                </button>
+                                                                                <button class="item" data-toggle="tooltip" data-placement="top" title="Delete">
+                                                                                    <i class="zmdi zmdi-delete"></i>
+                                                                                </button>
+                                                                                <button class="item" data-toggle="tooltip" data-placement="top" title="More">
+                                                                                    <i class="zmdi zmdi-more"></i>
+                                                                                </button>
+                                                                            </div>
+                                                                        </td>
+                                                                    </tr>
+                                                                </tbody>
+                                                            </table>
+                                                        </div>
+                                                        <!-- END DATA TABLE -->
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+   <!-- Jquery JS-->
+    <script src="../../vendor/jquery-3.2.1.min.js"></script>
+    <!-- Bootstrap JS-->
+    <script src="../../vendor/bootstrap-4.1/popper.min.js"></script>
+    <script src="../../vendor/bootstrap-4.1/bootstrap.min.js"></script>
+    <!-- Vendor JS       -->
+    <script src="../../vendor/slick/slick.min.js"></script>
+    <script src="../../vendor/wow/wow.min.js"></script>
+    <script src="../../vendor/animsition/animsition.min.js"></script>
+    <script src="../../vendor/bootstrap-progressbar/bootstrap-progressbar.min.js"></script>
+    <script src="../../vendor/counter-up/jquery.waypoints.min.js"></script>
+    <script src="../../vendor/counter-up/jquery.counterup.min.js"></script>
+    <script src="../../vendor/circle-progress/circle-progress.min.js"></script>
+    <script src="../../vendor/perfect-scrollbar/perfect-scrollbar.js"></script>
+    <script src="../../vendor/chartjs/Chart.bundle.min.js"></script>
+    <script src="../../vendor/select2/select2.min.js"></script>
+
+    <!-- Main JS-->
+    <script src="../../js/main.js"></script>
+    <script>
+        function editar() {
+            $("#formulario").show();
+        }
+        function borrar() {
+            result = confirm("Realmente desea borrar este registro?");
+        }
+
+        function agregar() {
+            $("#formulario").show()
+        }
+
+        function reset() {
+            $("#formulario").hide()
+        }
+
+        $("#cancelar").click(function(){ $("#formulario").hide(); });
+        //$("#agregar").click(function() { $("#formulario").show(); });
+
+        var alertas=document.getElementById("alert").textContent;
+        $(document).ready(function(){
+            if(alertas.length>10) {
+                style_muestra='block'
+                $("#formulario").show()
+
+            }else{
+                style_muestra='none'
+                $("#formulario").hide()
+            }
+            frm = document.getElementById("formulario");
+            frm.style.display = style_muestra;
+        });
+
+     </script>
+</body>
+
+</html>
+<!-- end document-->

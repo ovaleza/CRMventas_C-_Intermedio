@@ -1,0 +1,8 @@
+C:\ITLA\c#\clases\CRMventas\CRMventas\obj\Debug\net6.0\CRMventas.csproj.AssemblyReference.cache
+C:\ITLA\c#\clases\CRMventas\CRMventas\obj\Debug\net6.0\CRMventas.GeneratedMSBuildEditorConfig.editorconfig
+C:\ITLA\c#\clases\CRMventas\CRMventas\obj\Debug\net6.0\CRMventas.AssemblyInfoInputs.cache
+C:\ITLA\c#\clases\CRMventas\CRMventas\obj\Debug\net6.0\CRMventas.AssemblyInfo.cs
+C:\ITLA\c#\clases\CRMventas\CRMventas\obj\Debug\net6.0\CRMventas.csproj.CoreCompileInputs.cache
+C:\ITLA\c#\clases\CRMventas\CRMventas\obj\Debug\net6.0\CRMventas.MvcApplicationPartsAssemblyInfo.cache
+C:\ITLA\c#\clases\CRMventas\CRMventas\obj\Debug\net6.0\CRMventas.RazorAssemblyInfo.cache
+C:\ITLA\c#\clases\CRMventas\CRMventas\obj\Debug\net6.0\CRMventas.RazorAssemblyInfo.cs
