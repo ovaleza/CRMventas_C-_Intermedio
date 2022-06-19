@@ -44,13 +44,9 @@
                     <div class="container-fluid">
                         <div class="row">
                             <div class="col-lg-4">
-                                @*<h3 align="left">USUARIOS</h3>*@
-
                                 <!-- DATA TABLE-->
- 
                                 <div class="table-responsive" id="maestro" name="maestro" >
-                                    <!--                                    <table class="table table-borderless table-data3">-->
-                                    <table class="table table-responsive table-data3" asp-controller="Home" asp-action="GetList">
+                                    <table class="table table-responsive table-data3" asp-controller="Home" asp-action="tclients">
                                         <thead>
                                             <tr> 
                                                 <th><strong class="process">Tipo CLIENTES</strong></th>
@@ -75,52 +71,25 @@
                                             </tr>
                                         </thead>
                                         <tbody>
+                                            @foreach (var tclient in Model.Tclients)
+                                            {
                                             <tr>
-                                                <td>1</td>
-                                                <td>Almacenes</td>
-                                                <td>Almacenistas de alimentos</td>
+                                                <td>@tclient.Id</td>
+                                                <td>@tclient.Name</td>
+                                                <td>@tclient.Note</td>
                                                 <td>
                                                     <div class="table-data-feature">
                                                         <button class="item" data-toggle="tooltip" data-placement="top" title="Editar" onclick="editar()">
                                                             <i class="zmdi zmdi-edit"></i>
                                                         </button>
-                                                        <button class="item" data-toggle="tooltip" data-placement="top" title="Borrar" onclick="borrar()">
+                                                        <button type="submit" class="item" data-toggle="tooltip" data-placement="top" title="Borrar" value=@tclient.Id onclick="return borrar(@tclient.Id)">
                                                             <i class="zmdi zmdi-delete"></i>
                                                         </button>
                                                     </div>
                                                 </td>
                                             </tr>
-                                            <tr>
-                                                <td>2</td>
-                                                <td>Importadores</td>
-                                                <td>Importadores de mercancia</td>
-                                                <td>
-                                                    <div class="table-data-feature">
-                                                        <button class="item" data-toggle="tooltip" data-placement="top" title="Editar" onclick="editar()">
-                                                            <i class="zmdi zmdi-edit"></i>
-                                                        </button>
-                                                        <button class="item" data-toggle="tooltip" data-placement="top" title="Borrar" onclick="borrar()">
-                                                            <i class="zmdi zmdi-delete"></i>
-                                                        </button>
-                                                    </div>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td>3</td>
-                                                <td>Gubernamental</td>
-                                                <td>Empresas del estado</td>
-                                                <td>
-                                                    <div class="table-data-feature">
-                                                        <button class="item" data-toggle="tooltip" data-placement="top" title="Editar" onclick="editar()">
-                                                            <i class="zmdi zmdi-edit"></i>
-                                                        </button>
-                                                        <button class="item" data-toggle="tooltip" data-placement="top" title="Borrar" onclick="borrar()">
-                                                            <i class="zmdi zmdi-delete"></i>
-                                                        </button>
-                                                    </div>
-                                                </td>
-                                            </tr>
-               
+                                            } 
+
                                         </tbody>
                                     </table>
                                 </div>

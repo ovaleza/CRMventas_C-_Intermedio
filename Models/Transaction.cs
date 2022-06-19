@@ -14,14 +14,14 @@ namespace CRMventas.Models
         public string Type { get; set; }
         [Required(ErrorMessage = "El Monto es requerido.")]
         public string Amount { get; set; }
-        public string User { get; set; }
+        [Required(ErrorMessage = "La fecha es invalida.")]
+        public DateTime Date { get; set; }
+        public string UserId { get; set; }
         public string Note { get; set; }
         public string Status { get; set; }
         public string File { get; set; }
-    }
-    public class TransactionList
-    {
-        public List<Transaction> Transactions; 
-
+        public string Client { get; set; }
+        public string User { get; set; }
+        public IEnumerable<Transaction> Transactions { get; set; }
     }
 }

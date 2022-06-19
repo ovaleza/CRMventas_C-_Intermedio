@@ -41,11 +41,11 @@
                 <div class="section__content section__content--p30">
                     <div class="container-fluid">
                         <div class="row">
-                            <div class="col-lg-6">
+                            <div class="col-lg-4">
                                 <!-- DATA TABLE-->
                                 <div class="table-responsive m-b-40">
 <!--                                    <table class="table table-borderless table-data3">-->
-                                        <table class="table table-responsive table-data3">
+                                        <table class="table table-borderless table-data3">
                                         <thead>
                                             <tr> 
                                                 <th><strong class="process">CLIENTES</strong></th>
@@ -73,6 +73,27 @@
                                             </tr>
                                         </thead>
                                         <tbody>
+                                            @foreach (var client in Model.Clients)
+                                            {
+                                            <tr>
+                                                <td>@client.Id</td>
+                                                <td>@client.Name</td>
+                                                <td>@client.Phone</td>
+                                                <td class="process">@client.Active</td>
+                                                <td>
+                                                    <div class="table-data-feature">
+                                                        <button class="item" data-toggle="tooltip" data-placement="top" title="Editar" onclick="editar()">
+                                                            <i class="zmdi zmdi-edit"></i>
+                                                        </button>
+                                                        <button type="submit" class="item" data-toggle="tooltip" data-placement="top" title="Borrar" value=@client.Id onclick="return borrar(@client.Id)">
+                                                            <i class="zmdi zmdi-delete"></i>
+                                                        </button>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            } 
+
+
                                             <tr>
                                                 <td>1</td>
                                                 <td>Carlos Jimenez</td>

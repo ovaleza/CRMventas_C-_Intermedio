@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Threading.Tasks;
 using Dapper;
 using CRMventas.Models;
 using Microsoft.Data.SqlClient;
@@ -10,14 +12,13 @@ namespace CRMventas.Services
     public interface IClientRepository
     {
         void ClientInsert(Client client);
-        public ClientList clientList();
+        Task<IEnumerable<Client>> ClientList();
         void TclientInsert(Tclient tclient);
-        public TclientList tclientList();
+        Task<IEnumerable<Tclient>> TclientList();
         void TiterInsert(Titer titer);
-        public TiterList titerList();
+        Task<IEnumerable<Titer>> TiterList();
         void TtranInsert(Ttran ttran);
-        public TtranList ttranList();
-
+        Task<IEnumerable<Ttran>> TtranList();
     }
 
     public class ClientRepository : IClientRepository
@@ -45,23 +46,11 @@ namespace CRMventas.Services
                 }
             }
         }
-        public ClientList clientList()
+        public async Task<IEnumerable<Client>> ClientList()
         {
-            ClientList listado = new ClientList();
-            using (var conn = new SqlConnection(connectionString))
-            {
-                try
-                {
-                    string comando = "select id,name ,address ,phone ,email ,type ,active,file from clients";
-                    conn.Query<Client>(comando, conn);
-                }
-                catch (Exception e)
-                {
-                    Console.WriteLine("Hubo un error");
-                }
-            }
+            using var conn = new SqlConnection(connectionString);
+            return await conn.QueryAsync<Client>(@"Select * from Clients order by id desc");
 
-            return listado;
         }
         public void TclientInsert(Tclient tclient)
         {
@@ -80,23 +69,11 @@ namespace CRMventas.Services
                 }
             }
         }
-        public TclientList tclientList()
+        public async Task<IEnumerable<Tclient>> TclientList()
         {
-            TclientList listado = new TclientList();
-            using (var conn = new SqlConnection(connectionString))
-            {
-                try
-                {
-                    string comando = "select id,name ,[user] ,Note from tclients";
-                    conn.Query<Tclient>(comando, conn);
-                }
-                catch (Exception e)
-                {
-                    Console.WriteLine("Hubo un error");
-                }
-            }
+            using var conn = new SqlConnection(connectionString);
+            return await conn.QueryAsync<Tclient>(@"Select * from Tclients order by id desc");
 
-            return listado;
         }
 
         public void TiterInsert(Titer titer)
@@ -116,22 +93,11 @@ namespace CRMventas.Services
                 }
             }
         }
-        public TiterList titerList()
+        public async Task<IEnumerable<Titer>> TiterList()
         {
-            TiterList listado = new TiterList();
-            using (var conn = new SqlConnection(connectionString))
-            {
-                try
-                {
-                    string comando = "select id,name,[user],note from titeractions";
-                    conn.Query<Tclient>(comando, conn);
-                }
-                catch (Exception e)
-                {
-                    Console.WriteLine("Hubo un error");
-                }
-            }
-            return listado;
+            using var conn = new SqlConnection(connectionString);
+            return await conn.QueryAsync<Titer>(@"Select * from Titeractions order by id desc");
+
         }
 
         public void TtranInsert(Ttran ttran)
@@ -151,24 +117,12 @@ namespace CRMventas.Services
                 }
             }
         }
-        public TtranList ttranList()
+        public async Task<IEnumerable<Ttran>> TtranList()
         {
-            TtranList listado = new TtranList();
-            using (var conn = new SqlConnection(connectionString))
-            {
-                try
-                {
-                    string comando = "select id, name ,[user] ,Note from ttransactions";
-                    conn.Query<Tclient>(comando, conn);
-                }
-                catch (Exception e)
-                {
-                    Console.WriteLine("Hubo un error");
-                }
-            }
-            return listado;
-        }
+            using var conn = new SqlConnection(connectionString);
+            return await conn.QueryAsync<Ttran>(@"Select * from Ttransactions order by id desc");
 
+        }
 
     }
 }

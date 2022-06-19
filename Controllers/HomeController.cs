@@ -17,11 +17,12 @@ namespace CRMventas.Controllers
     {
         private readonly IClientRepository clientRepository;
         private readonly IUserRepository userRepository;
-        public HomeController(IClientRepository clientRepository, IUserRepository userRepository)
+        private readonly ITranRepository tranRepository;
+        public HomeController(IClientRepository clientRepository, IUserRepository userRepository, ITranRepository tranRepository)
         {
-            this.clientRepository = clientRepository;
-            this.userRepository = userRepository;
-
+            this.clientRepository   = clientRepository;
+            this.userRepository     = userRepository;
+            this.tranRepository     = tranRepository;
         }
         public IActionResult Index()
         {
@@ -32,131 +33,149 @@ namespace CRMventas.Controllers
         {
             return View();
         }
-
-        public IActionResult clients()
+        public IActionResult reports()
         {
             return View();
         }
-
-        [HttpPost]
-        public IActionResult clients(Client client)
+        public async Task<IActionResult> iteractions()      // PARA INSERTAR LA TABLA DE TODOS LOS REGISTROS EN LA VISTA
         {
-            if (ModelState.IsValid)
-            {
-                clientRepository.ClientInsert(client);
-                ModelState.Clear();
-                return View();
-            }
-            else
-            {
-                return View(client);
-            }
-        }
-
-
-
-        public async Task<IActionResult> users()
-        {
-            //var usuarios = await userRepository.UserList();
-            //var usuarios = await userRepository.UserList();
-            Modelos modelo = new Modelos();
-            modelo.Users = await userRepository.UserList(); 
-            modelo.User = new User();
-            //modelito.Users = usuarios;
+            Iteraction modelo = new Iteraction();
+            modelo.Iteractions = await tranRepository.IterList();
             return View(modelo);
         }
 
-
         [HttpPost]
-        public IActionResult users(Modelos modelo)
-        {
-            //userRepository.UserDelete(user.Id);
-            //ModelState.Clear();
-            //return View();
-            User user = modelo.User;
-
-            if (ModelState.IsValid)
-            {
-                userRepository.UserInsert(user);
-                ModelState.Clear();
-                return View(modelo);
-            }
-            else
-            {
-                //return View(modelo);
-                return View(modelo);
-            }
-        }
-
-        //[HttpPost]
-        //public IActionResult users(String Id)
-        //{
-        //    userRepository.UserDelete(Id);
-        //    ModelState.Clear();
-        //    return View();
-        //}
-
-        public IActionResult tclients()
-        {
-            userRepository.UserList();
-            return View();
-        }
-
-        [HttpPost]
-        public IActionResult tclients(Tclient tclient)
+        public async Task<IActionResult> iteractions(Iteraction modelo)
         {
             if (ModelState.IsValid)
             {
-                clientRepository.TclientInsert(tclient);
+                tranRepository.IterInsert(modelo);
                 ModelState.Clear();
-                return View();
+                modelo = new Iteraction();
             }
-            else
-            {
-                return View(tclient);
-            }
+            modelo.Iteractions = await tranRepository.IterList();
+            return View(modelo);
         }
 
-        public IActionResult titers()
+        public async Task<IActionResult> transactions()      // PARA INSERTAR LA TABLA DE TODOS LOS REGISTROS EN LA VISTA
         {
-            clientRepository.titerList();
-            return View();
+            Transaction modelo = new Transaction();
+            modelo.Transactions = await tranRepository.TranList();
+            return View(modelo);
         }
 
         [HttpPost]
-        public IActionResult titers(Titer titer)
+        public async Task<IActionResult> transactions(Transaction modelo)
         {
             if (ModelState.IsValid)
             {
-                clientRepository.TiterInsert(titer);
+                tranRepository.TranInsert(modelo);
                 ModelState.Clear();
-                return View();
+                modelo = new Transaction();
             }
-            else
-            {
-                return View(titer);
-            }
+            modelo.Transactions = await tranRepository.TranList();
+            return View(modelo);
         }
 
-        public IActionResult ttrans()
+        public async Task<IActionResult> clients()      // PARA INSERTAR LA TABLA DE TODOS LOS REGISTROS EN LA VISTA
         {
-            clientRepository.ttranList();
-            return View();
+            Client modelo = new Client();
+            modelo.Clients = await clientRepository.ClientList();
+            return View(modelo);
         }
 
         [HttpPost]
-        public IActionResult ttrans(Ttran ttran)
+        public async Task<IActionResult> clients(Client modelo)
         {
             if (ModelState.IsValid)
             {
-                clientRepository.TtranInsert(ttran);
+                clientRepository.ClientInsert(modelo);
                 ModelState.Clear();
-                return View();
+                modelo = new Client();
             }
-            else
+            modelo.Clients= await clientRepository.ClientList();
+            return View(modelo);
+        }
+
+        public async Task<IActionResult> users()      // PARA INSERTAR LA TABLA DE TODOS LOS REGISTROS EN LA VISTA
+        {
+            User modelo = new User();
+            modelo.Users = await userRepository.UserList(); 
+            return View(modelo);
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> users(User modelo)
+        {
+            if (ModelState.IsValid)
             {
-                return View(ttran);
+                userRepository.UserInsert(modelo);
+                ModelState.Clear();
+                modelo = new User();
             }
+            modelo.Users = await userRepository.UserList();
+            return View(modelo);
+        }
+
+        public async Task<IActionResult> tclients() 
+        {
+            Tclient modelo = new Tclient();
+            modelo.Tclients = await clientRepository.TclientList();
+            return View(modelo);
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> tclients(Tclient modelo)
+        {
+            if (ModelState.IsValid)
+            {
+                clientRepository.TclientInsert(modelo);
+                ModelState.Clear();
+                modelo = new Tclient();
+            }
+            modelo.Tclients = await clientRepository.TclientList();
+            return View(modelo);
+
+        }
+
+        public async Task<IActionResult> titers()
+        {
+            Titer modelo = new Titer();
+            modelo.Titers = await clientRepository.TiterList();
+            return View(modelo);
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> titers(Titer modelo)
+        {
+            if (ModelState.IsValid)
+            {
+                clientRepository.TiterInsert(modelo);
+                ModelState.Clear();
+                modelo = new Titer();
+            }
+            modelo.Titers = await clientRepository.TiterList();
+            return View(modelo);
+        }
+
+        public async Task<IActionResult> ttrans()
+        {
+            Ttran modelo = new Ttran();
+            modelo.Ttrans = await clientRepository.TtranList();
+            return View(modelo);
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> ttrans(Ttran modelo)
+        {
+            if (ModelState.IsValid)
+            {
+                clientRepository.TtranInsert(modelo);
+                ModelState.Clear();
+                modelo = new Ttran();
+            }
+            modelo.Ttrans = await clientRepository.TtranList();
+            return View(modelo);
         }
 
 

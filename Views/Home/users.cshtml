@@ -1,4 +1,6 @@
-﻿
+﻿@using Dapper
+@using Microsoft.Data.SqlClient
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -40,22 +42,12 @@
 <body class="animsition">
             <!-- MAIN CONTENT-->
             <div class="main-content">
-                    @model Modelos
-
                 <div class="section__content section__content--p30">
                     <div class="container-fluid">
                         <div class="row">
                             <div class="col-lg-4">
-
-                                @*<h3 align="left">USUARIOS</h3>*@
-
-                                <!-- DATA TABLE-->
-
                                 <div class="table-responsive" id="maestro" name="maestro" >
-                                    <!--                                    <table class="table table-borderless table-data3">-->
-
-                                    <table class="table table-responsive table-data3" asp-controller="Home" asp-action="GetList">
-                                
+                                    <table class="table table-responsive table-data3" asp-controller="Home" asp-action="users">
                                         <thead>
                                             <tr> 
                                                 <th><strong class="process">USUARIOS</strong></th>
@@ -93,7 +85,7 @@
                                                         <button class="item" data-toggle="tooltip" data-placement="top" title="Editar" onclick="editar()">
                                                             <i class="zmdi zmdi-edit"></i>
                                                         </button>
-                                                        <button type="submit" class="item" data-toggle="tooltip" data-placement="top" title="Borrar" value=@user.Id onclick="return borrar('@user.Id')">
+                                                        <button type="submit" class="item" data-toggle="tooltip" data-placement="top" title="Borrar" value=@user.Id onclick="return borrar(@user.Id)">
                                                             <i class="zmdi zmdi-delete"></i>
                                                         </button>
                                                     </div>
@@ -113,7 +105,7 @@
                                         <h4>Ficha de Usuario</h4>
                                     </div>
                                     <div class="card-body card-block">
-
+                                        @model User
                                         <form method="post" enctype="multipart/form-data" class="form-horizontal" asp-controller="Home" asp-action="users">
                                             <div class="table-data__tool">
                                                 <div class="table-data__tool-right" align="right">
@@ -131,7 +123,7 @@
                                                     <label class=" form-control-label">ID</label>
                                                 </div>
                                                 <div class="col-12 col-md-9">
-                                                    <input type="text" id="id" name="id" class="form-control-static" disabled asp-for="User.Id">
+                                                    <input type="text" id="id" name="id" class="form-control-static" disabled asp-for="Id">
                                                 </div>
                                             </div>
 
@@ -140,7 +132,7 @@
                                                     <label for="nombre" class=" form-control-label">Nombre</label>
                                                 </div>
                                                 <div class="col-12 col-md-9">
-                                                    <input type="text" id="name" name="name" placeholder="Colocar nombre completo [Requerido]" class="form-control" asp-for="User.Name">
+                                                    <input type="text" id="name" name="name" placeholder="Colocar nombre completo [Requerido]" class="form-control" asp-for="Name">
                                                 </div>
                                             </div>
                                             <div class="row form-group">
@@ -148,7 +140,7 @@
                                                     <label for="UserType" class=" form-control-label">Tipo Usuario</label>
                                                 </div>
                                                 <div class="col-12 col-md-9">
-                                                    <select name="Type" id="UserType" class="form-control" asp-for="User.Type">
+                                                    <select name="Type" id="UserType" class="form-control" asp-for="Type">
                                                         <option value="0">Escoja tipo Usuario [Requerido]</option>
                                                         <option value="1">Administrador</option>
                                                         <option value="2">Supervisor</option>
@@ -162,7 +154,7 @@
                                                     <label for="email-input" class=" form-control-label">Email</label>
                                                 </div>
                                                 <div class="col-12 col-md-9">
-                                                    <input type="email" id="email-input" name="Email" placeholder="email@com" class="form-control" asp-for="User.Email">
+                                                    <input type="email" id="email-input" name="Email" placeholder="email@com" class="form-control" asp-for="Email">
                                                 </div>
                                             </div>
                                             <div class="row form-group">
@@ -170,7 +162,7 @@
                                                     <label for="user" class=" form-control-label">User Name [Requerido]</label>
                                                 </div>
                                                 <div class="col-12 col-md-9">
-                                                    <input type="text" id="user" name="UserName" placeholder="Colocar nombre corto de usuario" class="form-control" asp-for="User.UserName">
+                                                    <input type="text" id="user" name="UserName" placeholder="Colocar nombre corto de usuario" class="form-control" asp-for="UserName">
                                                 </div>
                                             </div>
                                             <div class="row form-group">
@@ -197,7 +189,7 @@
                                                     <div class="form-check">
                                                         <div class="checkbox">
                                                             <label for="checkbox1" class="form-check-label ">
-                                                                <input type="checkbox" id="Active" name="Active" value="True" class="form-check-input" asp-for="User.Active">Activo
+                                                                <input type="checkbox" id="Active" name="Active" value="True" class="form-check-input" asp-for="Active">Activo
                                                             </label>
                                                         </div>
                                                     </div>
@@ -208,7 +200,7 @@
                                                     <label for="file-multiple-input" class=" form-control-label">Cargar documentos</label>
                                                 </div>
                                                 <div class="col-12 col-md-9">
-                                                    <input type="file" id="file-multiple-input" name="File" multiple="" class="form-control-file" asp-for="User.File">
+                                                    <input type="file" id="file-multiple-input" name="File" multiple="" class="form-control-file" asp-for="File">
                                                 </div>
                                             </div>
                                         </form>
@@ -246,10 +238,6 @@
         function borrar(var1) {
 
             jj=var1
-//            document.getElementById("id").value="7"
-//            jj=document.getElementById("id").value
-//            alert(jj);
-//            location.href="/users?pagina?Id="+jj+",accion=borrar";
             result = confirm("Realmente desea borrar el registro id ( "+jj+" )");
 //            location.reload("1");
             window.location.replace(window.location.href + '?Id='+jj)

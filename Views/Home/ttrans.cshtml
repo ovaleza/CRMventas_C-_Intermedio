@@ -44,13 +44,9 @@
                     <div class="container-fluid">
                         <div class="row">
                             <div class="col-lg-4">
-                                @*<h3 align="left">USUARIOS</h3>*@
-
-                                <!-- DATA TABLE-->
- 
                                 <div class="table-responsive" id="maestro" name="maestro" >
                                     <!--                                    <table class="table table-borderless table-data3">-->
-                                    <table class="table table-responsive table-data3" asp-controller="Home" asp-action="GetList">
+                                    <table class="table table-responsive table-data3" asp-controller="Home" asp-action="ttrans">
                                         <thead>
                                             <tr> 
                                                 <th><strong class="process">Tipo TRANSACCIONES</strong></th>
@@ -75,52 +71,24 @@
                                             </tr>
                                         </thead>
                                         <tbody>
+                                            @foreach (var ttran in Model.Ttrans)
+                                            {
                                             <tr>
-                                                <td>1</td>
-                                                <td>Factura</td>
-                                                <td>Para registrar Facturas de Ventas</td>
+                                                <td>@ttran.Id</td>
+                                                <td>@ttran.Name</td>
+                                                <td>@ttran.Note</td>
                                                 <td>
                                                     <div class="table-data-feature">
                                                         <button class="item" data-toggle="tooltip" data-placement="top" title="Editar" onclick="editar()">
                                                             <i class="zmdi zmdi-edit"></i>
                                                         </button>
-                                                        <button class="item" data-toggle="tooltip" data-placement="top" title="Borrar" onclick="borrar()">
+                                                        <button type="submit" class="item" data-toggle="tooltip" data-placement="top" title="Borrar" value=@ttran.Id onclick="return borrar(@ttran.Id)">
                                                             <i class="zmdi zmdi-delete"></i>
                                                         </button>
                                                     </div>
                                                 </td>
                                             </tr>
-                                            <tr>
-                                                <td>2</td>
-                                                <td>Recibos</td>
-                                                <td>Para Registrar Cobros</td>
-                                                <td>
-                                                    <div class="table-data-feature">
-                                                        <button class="item" data-toggle="tooltip" data-placement="top" title="Editar" onclick="editar()">
-                                                            <i class="zmdi zmdi-edit"></i>
-                                                        </button>
-                                                        <button class="item" data-toggle="tooltip" data-placement="top" title="Borrar" onclick="borrar()">
-                                                            <i class="zmdi zmdi-delete"></i>
-                                                        </button>
-                                                    </div>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td>3</td>
-                                                <td>Descuentos</td>
-                                                <td>Para Registrar Notas de Credito</td>
-                                                <td>
-                                                    <div class="table-data-feature">
-                                                        <button class="item" data-toggle="tooltip" data-placement="top" title="Editar" onclick="editar()">
-                                                            <i class="zmdi zmdi-edit"></i>
-                                                        </button>
-                                                        <button class="item" data-toggle="tooltip" data-placement="top" title="Borrar" onclick="borrar()">
-                                                            <i class="zmdi zmdi-delete"></i>
-                                                        </button>
-                                                    </div>
-                                                </td>
-                                            </tr>
-               
+                                            } 
                                         </tbody>
                                     </table>
                                 </div>

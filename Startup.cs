@@ -27,6 +27,7 @@ namespace CRMventas
             services.AddControllersWithViews();
             services.AddTransient<IClientRepository, ClientRepository>();
             services.AddTransient<IUserRepository, UserRepository>();
+            services.AddTransient<ITranRepository, TranRepository>();
 
         }
 

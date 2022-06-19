@@ -7,8 +7,6 @@ using Microsoft.Data.SqlClient;
 using Microsoft.Extensions.Configuration;
 using System.Collections.Generic;
 
-
-
 namespace CRMventas.Services
 {
     public interface IUserRepository {
@@ -23,7 +21,6 @@ namespace CRMventas.Services
     {
         private readonly string connectionString;
         public List<User> listUsers = new List<User>();
-        //public UserList list = new UserList();
 
         public UserRepository(IConfiguration configuration)
         {
@@ -115,45 +112,8 @@ namespace CRMventas.Services
         public async Task<IEnumerable<User>> UserList()
         {
             using var conn = new SqlConnection(connectionString);
-            return await conn.QueryAsync<User>(@"Select * from Users");
+            return await conn.QueryAsync<User>(@"Select * from Users order by id desc");
 
         }
-        //public UserList UserList2()
-        //{
-        //    UserList userList = new UserList();
-        //    using (var conn = new SqlConnection(connectionString))
-        //    {
-        //        try
-        //        {
-
-        //            conn.Open();
-        //            string sql = "select id,name,email,username,type,Active,File from users";
-        //            using (SqlCommand cmd = new SqlCommand(sql, conn))
-        //            {
-        //                using (SqlDataReader reader = cmd.ExecuteReader())
-        //                {
-        //                    while (reader.Read())
-        //                    {
-        //                        User user = new() { 
-        //                            Id = reader.GetString(0),
-        //                            Name = reader.GetString(1),
-        //                            Email = reader.GetString(2),
-        //                            UserName = reader.GetString(3),
-        //                            Type = reader.GetString(4),
-        //                            Active = reader.GetBoolean(5),
-        //                            File = reader.GetString(6)
-        //                        };
-        //                    userList.Users.Add(user);
-        //                    }
-        //                }
-        //            }
-        //        }
-        //        catch (Exception e)
-        //        {
-        //            Console.WriteLine("Hubo un error");
-        //        }
-        //    }
-        //    return userList;
-        //}
     }
 }

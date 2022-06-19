@@ -17,9 +17,6 @@ namespace CRMventas.Models
         public string Type { get; set; }
         public bool Active { get; set; }
         public string File { get; set; }
-    }
-    public class ClientList
-    {
-       public List<Client> Clients;
+        public IEnumerable<Client> Clients { get; set; }
     }
 }
