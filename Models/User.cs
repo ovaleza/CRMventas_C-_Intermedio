@@ -22,11 +22,6 @@ namespace CRMventas.Models
         public string PasswordConfirm { get; set; }
         public bool Active { get; set; }
         public string File { get; set; }
-    }
-
-    public class Modelos
-    {
-        public User User { get; set; }
         public IEnumerable<User> Users { get; set; }
     }
 }

@@ -12,13 +12,13 @@ namespace CRMventas.Models
         public string ClientId { get; set; }
         [Range(1,4, ErrorMessage = "El Tipo de Trasaccion es requerido.")]
         public string Type { get; set; }
-        public string User { get; set; }
+        public DateTime Date { get; set; }
+        public string UserId { get; set; }
         public string Note { get; set; }
         public string Status { get; set; }
         public string File { get; set; }
-    }
-    public class IteractionList
-    {
-        public List<Iteraction> Iteractions; 
+        public string Client { get; set; }
+        public string User { get; set; }
+        public IEnumerable<Iteraction> Iteractions { get; set; }
     }
 }

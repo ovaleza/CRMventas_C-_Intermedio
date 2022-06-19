@@ -75,52 +75,26 @@
                                             </tr>
                                         </thead>
                                         <tbody>
+                                            @foreach (var titer in Model.Titers)
+                                            {
                                             <tr>
-                                                <td>1</td>
-                                                <td>Ventas o Mercadeo</td>
-                                                <td>Gestion de ventas y mercadeos</td>
+                                                <td>@titer.Id</td>
+                                                <td>@titer.Name</td>
+                                                <td>@titer.Note</td>
                                                 <td>
                                                     <div class="table-data-feature">
                                                         <button class="item" data-toggle="tooltip" data-placement="top" title="Editar" onclick="editar()">
                                                             <i class="zmdi zmdi-edit"></i>
                                                         </button>
-                                                        <button class="item" data-toggle="tooltip" data-placement="top" title="Borrar" onclick="borrar()">
+                                                        <button type="submit" class="item" data-toggle="tooltip" data-placement="top" title="Borrar" value=@titer.Id onclick="return borrar(@titer.Id)">
                                                             <i class="zmdi zmdi-delete"></i>
                                                         </button>
                                                     </div>
                                                 </td>
                                             </tr>
-                                            <tr>
-                                                <td>2</td>
-                                                <td>Quejas y Sugerencias</td>
-                                                <td>Quejas y/o Sugerencias de los clientes</td>
-                                                <td>
-                                                    <div class="table-data-feature">
-                                                        <button class="item" data-toggle="tooltip" data-placement="top" title="Editar" onclick="editar()">
-                                                            <i class="zmdi zmdi-edit"></i>
-                                                        </button>
-                                                        <button class="item" data-toggle="tooltip" data-placement="top" title="Borrar" onclick="borrar()">
-                                                            <i class="zmdi zmdi-delete"></i>
-                                                        </button>
-                                                    </div>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td>3</td>
-                                                <td>Cobros</td>
-                                                <td>Gestion de Cobros</td>
-                                                <td>
-                                                    <div class="table-data-feature">
-                                                        <button class="item" data-toggle="tooltip" data-placement="top" title="Editar" onclick="editar()">
-                                                            <i class="zmdi zmdi-edit"></i>
-                                                        </button>
-                                                        <button class="item" data-toggle="tooltip" data-placement="top" title="Borrar" onclick="borrar()">
-                                                            <i class="zmdi zmdi-delete"></i>
-                                                        </button>
-                                                    </div>
-                                                </td>
-                                            </tr>
-               
+                                            } 
+
+
                                         </tbody>
                                     </table>
                                 </div>

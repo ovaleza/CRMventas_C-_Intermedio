@@ -12,9 +12,7 @@ namespace CRMventas.Models
         public string Name { get; set; }
         public string User { get; set; }
         public string Note { get; set; }
-    }
-    public class TclientList
-    {
-        public List<Tclient> Tclients;
+        public IEnumerable<Tclient> Tclients { get; set; }
+
     }
 }

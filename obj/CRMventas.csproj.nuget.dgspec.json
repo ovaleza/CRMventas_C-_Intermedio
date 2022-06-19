@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\ITLA\\c#\\clases\\CRMventas\\CRMventas\\CRMventas.csproj": {}
+    "C:\\ITLA\\c#\\clases\\CRMventas\\CRMventas.csproj": {}
   },
   "projects": {
-    "C:\\ITLA\\c#\\clases\\CRMventas\\CRMventas\\CRMventas.csproj": {
+    "C:\\ITLA\\c#\\clases\\CRMventas\\CRMventas.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\ITLA\\c#\\clases\\CRMventas\\CRMventas\\CRMventas.csproj",
+        "projectUniqueName": "C:\\ITLA\\c#\\clases\\CRMventas\\CRMventas.csproj",
         "projectName": "CRMventas",
-        "projectPath": "C:\\ITLA\\c#\\clases\\CRMventas\\CRMventas\\CRMventas.csproj",
+        "projectPath": "C:\\ITLA\\c#\\clases\\CRMventas\\CRMventas.csproj",
         "packagesPath": "C:\\Users\\odulio\\.nuget\\packages\\",
-        "outputPath": "C:\\ITLA\\c#\\clases\\CRMventas\\CRMventas\\obj\\",
+        "outputPath": "C:\\ITLA\\c#\\clases\\CRMventas\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",

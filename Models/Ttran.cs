@@ -12,9 +12,6 @@ namespace CRMventas.Models
         public string Name { get; set; }
         public string User { get; set; }
         public string Note { get; set; }
-    }
-    public class TtranList
-    {
-        public List<Ttran> Ttrans;
+        public IEnumerable<Ttran> Ttrans { get; set; }
     }
 }

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "soBU2kwDJbKcLIT1RQboSkqrttSXD+Svg5zivXEUH2qplKBIBgZ+WKjFDSl63gyR1rF0N7XAP6A7QvIkyCmBOw==",
+  "dgSpecHash": "uCV/R2r0/l0Q5yTCNRrfo8/c9hTaJsvoLi8jKbsgsHxL/Q3c/eTlE1SZFfPK9sdw9bOi8YEDN5z13vY70brmKw==",
   "success": true,
-  "projectFilePath": "C:\\ITLA\\c#\\clases\\CRMventas\\CRMventas\\CRMventas.csproj",
+  "projectFilePath": "C:\\ITLA\\c#\\clases\\CRMventas\\CRMventas.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\odulio\\.nuget\\packages\\azure.core\\1.6.0\\azure.core.1.6.0.nupkg.sha512",
     "C:\\Users\\odulio\\.nuget\\packages\\azure.identity\\1.3.0\\azure.identity.1.3.0.nupkg.sha512",

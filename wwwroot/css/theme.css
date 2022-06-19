@@ -4352,25 +4352,22 @@ section {
         vertical-align: middle;
     }
 
-tbody.scrollContent {
-    display: block; /*obligado*/
+/*tbody.scrollContent {
+    display: block;
     width: 100%;
-    overflow: auto
+    overflow: auto;
 }
+*/
 
-.table-data3 {
-    overflow:scroll;
-}
-
-.table-data, .table-data1, .table-data3, .card-right, {
-    height: 500px;
-    /*width: 400px;*/
-        /*overflow: auto;*/
+.table-data, .table-data1, .table-data3, .card-right{
+    /*max-height: 500px;*/
+    height:100%;
 }
 
     .table-data, .table-data3, .table-data1, .card-right thead {
-        display: block;
+        /*display: block;*/
         position: relative;
+        overflow: hidden;
     }
 
 
@@ -14679,3 +14676,19 @@ tbody.scrollContent {
 .hidden {
     display: none;
 }
+
+
+thead {
+    /*width:100%;*/
+    /*display:block;*/
+}
+
+
+tbody {
+    /*display:block;*/
+    /*max-height: 500px;*/ 
+    /*width:100%;*/
+/*    overflow-y:scroll;  
+    overflow-x: hidden; 
+*/}
+
